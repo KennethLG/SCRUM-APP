@@ -1,10 +1,14 @@
-import React, {useState} from "react";
-
+import React, {useState, useEffect} from "react";
 import './App.css';
+
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "./actions";
 
 const App = () => {
 
   const [state, setState] = useState({email: "", psw:""});
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
 
   const onChange = (e) => {
     const target = e.target.name;
@@ -15,8 +19,12 @@ const App = () => {
   }
   const submit = (e) => {
     e.preventDefault();
-    console.log(state);
+    dispatch(loginUser(state));
   }
+
+  useEffect(()=> {
+    console.log(user);
+  }, [user]);
 
   return (
     <div className="App">
