@@ -2,9 +2,9 @@ const express = require("express");
 require("./connection");
 
 function router(app) {
-	app.get("/login", (req, res)=> {
+	app.post("/login", (req, res)=> {
 		try {
-			res.send("xd");
+			res.send(req.body);
 		} catch(e) {
 			console.log(e);
 		}
