@@ -1,12 +1,34 @@
 const express = require("express");
-require("./connection");
+const users = require("./database/user");
+require("./database/connection");
 
-function router(app) {
-	app.post("/login", (req, res)=> {
+const router = (app) => {
+	app.post("/login", async (req, res, next)=> {
 		try {
-			res.send(req.body);
+			const user = req.body;
+			const findUser = await users.findOne({email: user.email});
+			console.log(user, findUser);
+			if (findUser) {
+				if (user.password == findUser.password) {
+					res.json({
+						user: findUser,
+						message: ""
+					});
+				} else {
+					res.json({
+						user: undefined,
+						message: "Email or/and password wrongs"
+					});
+				}
+			} else {
+				res.json({
+					user: undefined,
+					message: "Email not found, are you signed in?"
+				});
+			}
 		} catch(e) {
-			console.log(e);
+			console.error(e);
+			next(e);
 		}
 	});
 }
