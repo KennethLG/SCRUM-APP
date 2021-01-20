@@ -34,7 +34,7 @@ export const Login = () => {
 						<label className="login-input-title">Password</label><br />
 						<input onChange={onChange} name="password" className="login-input" type="password" placeholder="Password" />
 						<button className="submit" type="submit">Submit</button>
-						<div className="login-message">{user.message}</div>
+						<div className="message">{user.message}</div>
 					</form>
 				</div>
 			</div>
