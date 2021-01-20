@@ -1,6 +1,6 @@
 body {
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2,0,80,1) 0%, rgba(9,9,121,1) 40%, rgba(0,212,200,1) 100%);
 }
 
 .title-app {
@@ -18,7 +18,7 @@ body {
 /* LOGIN COMPONENT*/
 
 .login-container {
-  width: 70%;
+  width: 50%;
   margin: 32px auto;
   left: 0;
   right: 0;
@@ -27,19 +27,19 @@ body {
 .login-box {
   background-color: rgba(250,250,250,1);
   box-shadow: 0px 0px 30px 10px rgba(0,0,0,.5);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .login-title {
-  font-size: 48px;
+  font-size: 32px;
   text-align: center;
-  margin: 32px;
+  margin: 16px;
   color: rgba(0,150,150,1);
 }
 
 .login-form {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -63,11 +63,11 @@ body {
   color: rgba(0,150,150,1);
 }
 
-.login-submit {
+.submit {
   margin: 0 auto;
   display: block;
   padding: 8px 32px;
-  font-size: 24px;
+  font-size: 16px;
   background: rgba(0,200,200,1);
   color: white;
   border: none;
@@ -76,14 +76,14 @@ body {
   transition: 1s;
 }
 
-.login-submit:hover {
+.submit:hover {
   background: white;
   color: rgba(50,50,50,1);
   transition: .2s;
 }
 
-.login-message {
-  font-size: 24px;
+.message {
+  font-size: 16px;
   text-align: center;
   color: rgba(200,0,0,1);
   margin: 16px 0;
@@ -92,39 +92,48 @@ body {
 /* HOME COMPONENT */
 
 .home {
-  width: 90%;
-  margin: 32px auto;
-  left: 0;
-  right: 0;
+  width: 100%;
+  margin: 32px 0;
   overflow: auto;
 }
 
 .companies {
   width: 50%;
   float: left;
+  margin: 16px 0;
 }
 
 .companies-box{
-  width: 80%;
+  width: 90%;
   margin: auto;
   left: 0;
   right: 0;
   background: white;
-  box-shadow: 0px 0px 30px 10px rgba(0,0,0,.5);
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,.5);
+  padding: 32px 0;
 }
 
 .employees {
   width: 50%;
   float: left;
+  margin: 16px 0;
 }
 
 .employees-box {
-  width: 80%;
+  width: 90%;
   margin: auto;
   left: 0;
   right: 0;
   background: white;
-  box-shadow: 0px 0px 30px 10px rgba(0,0,0,.5);
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,.5);
+  padding: 32px 0;
+}
+
+.employees-form {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 .home-title {
@@ -134,8 +143,112 @@ body {
   margin: 32px;
 }
 
-.row {
-  width: 25%;
+.company-form {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.home-input {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.home-input-title {
+  margin: 0 auto;
+  text-align: left;
+  color: rgba(0,200,200);
+  font-size: 16px;
+}
+
+.home-input-text {
+  width: 100%;
+  margin: 16px auto;
+  display: block;
+  border: none;
+  padding: 8px;
+  border-bottom: solid 1px rgba(0,200,200);
+  font-size: 16px;
+  background-color: rgba(255,255,255,1);
+  outline-style: none;
+  color: rgba(50,50,50,1);
+}
+
+table {
+  width: 80%;
+  max-height: 500px;
+  margin: 16px auto;
+  border: solid 1px rgba(0,200,200,1);
+  border-radius: 4px;
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+thead {
+  background: rgba(240,240,240,1);
+}
+
+td {
+  font-size: 16px;
+  color: rgba(80,80,80,1);
+  padding: 8px 0;
+}
+
+.delete, .edit, .see {
+  width: 100%;
+}
+
+.delete {
+  padding: 8px;
+  margin: 0 4px 0 0;
+  background: rgba(240,0,0,1);
+  color: white;
+  border: none;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.edit {
+  padding: 8px;
+  margin: 0 4px 0 0;
+  background: rgba(0,240,0,1);
+  color: white;
+  border: none;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.see {
+  padding: 8px;
+  margin: 0 4px 0 0;
+  background: rgba(240,240,240,1);
+  color: rgba(50,50,50,1);
+  border: none;
+  outline-style: none;
+  border-radius: 4px;
+}
+
+.unclicked {
+  background: white;
+  transition: 1s;
+}
+
+.unclicked:hover {
+  background: rgba(220,220,220,1);
+  transition: .1s;
+}
+
+.clicked {
+  background: rgba(220,220,220,1);
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(0,200,200,1);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -151,5 +264,29 @@ body {
     margin: 32px auto;
     left: 0;
     right: 0;
+  }
+
+  .companies-box {
+    width: 95%;
+  }
+
+  .employees-box {
+    width: 95%;
+  }
+
+  .login-input-title {
+    font-size: 16px;
+  }
+
+  .login-form {
+    width: 90%;
+  }
+
+  .login-container {
+    width: 90%;
+  }
+
+  table {
+    width: 90%;
   }
 }

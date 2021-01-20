@@ -15,13 +15,13 @@ import { reducer } from "./reducers";
 const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
-	<Provider store={store}>
+	(<Provider store={store}>
 		<React.StrictMode>
 			<Router>
 				<App />
 			</Router>
 		</React.StrictMode>
-	</Provider>,
+	</Provider>),
 	document.getElementById('root')
 );
 

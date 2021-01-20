@@ -21,13 +21,9 @@ export const Login = () => {
 		} else alert("Please complete the form")
 	}
 
-	useEffect(() => {
-		console.log(user);
-	}, [user]);
-
 	return (
 		<div>
-			<div className="title-app">SCRUM</div>
+			<div className="title-app">AgroApp</div>
 			<div className="subtitle">Login to use our services</div>
 			<div className="login-container">
 				<div className="login-box">
@@ -37,7 +33,7 @@ export const Login = () => {
 						<input onChange={onChange} name="email" className="login-input" type="email" placeholder="Email" /><br />
 						<label className="login-input-title">Password</label><br />
 						<input onChange={onChange} name="password" className="login-input" type="password" placeholder="Password" />
-						<button className="login-submit" type="submit">Submit</button>
+						<button className="submit" type="submit">Submit</button>
 						<div className="login-message">{user.message}</div>
 					</form>
 				</div>
