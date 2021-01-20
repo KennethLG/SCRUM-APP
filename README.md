@@ -19,6 +19,8 @@ npm start
 
 **Diagrama de flujo del desarrollo de la aplicación https://docs.google.com/presentation/d/1EODtNdT6AIYr7YIr10I2yF_MFotG9B9LNC-oUkMeZ3U/edit?usp=sharing**
 
+**Link de la app https://scrumagroapp.herokuapp.com/**
+
 ## Desarrollo
 
 Antes de comenzar con el frontend, se preparó un backend con ***Node.js***, haciendo uso de la librería ***Express.js***, la cual nos permite manejar el servidor de una manera bastante 
