@@ -13,6 +13,9 @@ Para iniciar el servidor de React.
 cd frontend
 npm start
 ```
+**Link del tablero en Trello https://trello.com/b/hLQpMzml/scrum**
+**Link de las historias de usuario https://docs.google.com/spreadsheets/d/1Ge8Nbs6QNk9hRgKgGaT0yeY0OJiGRuxwQ9fq8Aup8fM/edit?usp=sharing**
+**Diagrama de flujo del desarrollo de la aplicación https://docs.google.com/presentation/d/1EODtNdT6AIYr7YIr10I2yF_MFotG9B9LNC-oUkMeZ3U/edit?usp=sharing**
 
 ## Desarrollo
 
